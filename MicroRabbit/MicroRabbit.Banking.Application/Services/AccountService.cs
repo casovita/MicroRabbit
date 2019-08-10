@@ -26,12 +26,12 @@ namespace MicroRabbit.Banking.Application.Services
 
         public void Transfer(AccountTransfer transfer)
         {
-            CreateTransferCommand creaeTransferCommand = new CreateTransferCommand(
+            CreateTransferCommand createTransferCommand = new CreateTransferCommand(
                 transfer.FromAccount,
                 transfer.ToAccount,
                 transfer.TransferAmount
                 );
-            _eventBus.SendCommand(creaeTransferCommand);
+            _eventBus.SendCommand(createTransferCommand);
         }
     }
 }
